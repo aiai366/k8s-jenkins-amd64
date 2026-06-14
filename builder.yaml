@@ -17,8 +17,6 @@ spec:
     volumeMounts:
       - name: kaniko-secret
         mountPath: /kaniko/.docker
-  nodeSelector:
-    kubernetes.io/arch: amd64
   volumes:
     - name: kaniko-secret
       secret:

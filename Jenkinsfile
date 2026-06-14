@@ -20,8 +20,7 @@ pipeline {
             sh '''
             /kaniko/executor --dockerfile `pwd`/Dockerfile \
                              --context `pwd` \
-                             --destination=eiai365/k8s-kubernetes-demo-amd64:${BUILD_NUMBER} \
-                             --custom-platform=linux/amd64
+                             --destination=eiai365/k8s-kubernetes-demo-amd64:${BUILD_NUMBER}
             '''
           }
           echo 'Kaniko finish.'
